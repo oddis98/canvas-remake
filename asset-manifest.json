@@ -1,17 +1,19 @@
 {
   "files": {
     "main.css": "/canvas-remake/static/css/main.bd8abe39.chunk.css",
-    "main.js": "/canvas-remake/static/js/main.4ad8a819.chunk.js",
-    "main.js.map": "/canvas-remake/static/js/main.4ad8a819.chunk.js.map",
-    "runtime-main.js": "/canvas-remake/static/js/runtime-main.b24b5bd4.js",
-    "runtime-main.js.map": "/canvas-remake/static/js/runtime-main.b24b5bd4.js.map",
-    "static/js/2.85f3e9a4.chunk.js": "/canvas-remake/static/js/2.85f3e9a4.chunk.js",
-    "static/js/2.85f3e9a4.chunk.js.map": "/canvas-remake/static/js/2.85f3e9a4.chunk.js.map",
-    "static/js/3.8962fd9b.chunk.js": "/canvas-remake/static/js/3.8962fd9b.chunk.js",
-    "static/js/3.8962fd9b.chunk.js.map": "/canvas-remake/static/js/3.8962fd9b.chunk.js.map",
+    "main.js": "/canvas-remake/static/js/main.a8b10032.chunk.js",
+    "main.js.map": "/canvas-remake/static/js/main.a8b10032.chunk.js.map",
+    "runtime-main.js": "/canvas-remake/static/js/runtime-main.846a569a.js",
+    "runtime-main.js.map": "/canvas-remake/static/js/runtime-main.846a569a.js.map",
+    "static/css/2.f0fce20c.chunk.css": "/canvas-remake/static/css/2.f0fce20c.chunk.css",
+    "static/js/2.26a68ebd.chunk.js": "/canvas-remake/static/js/2.26a68ebd.chunk.js",
+    "static/js/2.26a68ebd.chunk.js.map": "/canvas-remake/static/js/2.26a68ebd.chunk.js.map",
+    "static/js/3.7e5fca49.chunk.js": "/canvas-remake/static/js/3.7e5fca49.chunk.js",
+    "static/js/3.7e5fca49.chunk.js.map": "/canvas-remake/static/js/3.7e5fca49.chunk.js.map",
     "index.html": "/canvas-remake/index.html",
+    "static/css/2.f0fce20c.chunk.css.map": "/canvas-remake/static/css/2.f0fce20c.chunk.css.map",
     "static/css/main.bd8abe39.chunk.css.map": "/canvas-remake/static/css/main.bd8abe39.chunk.css.map",
-    "static/js/2.85f3e9a4.chunk.js.LICENSE.txt": "/canvas-remake/static/js/2.85f3e9a4.chunk.js.LICENSE.txt",
+    "static/js/2.26a68ebd.chunk.js.LICENSE.txt": "/canvas-remake/static/js/2.26a68ebd.chunk.js.LICENSE.txt",
     "static/media/Poppins-Regular.8081832f.ttf": "/canvas-remake/static/media/Poppins-Regular.8081832f.ttf",
     "static/media/UiB_logo.b4ccc586.png": "/canvas-remake/static/media/UiB_logo.b4ccc586.png",
     "static/media/course1.ff9e7b66.jpg": "/canvas-remake/static/media/course1.ff9e7b66.jpg",
@@ -22,9 +24,10 @@
     "static/media/img5.34da336e.jpg": "/canvas-remake/static/media/img5.34da336e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b24b5bd4.js",
-    "static/js/2.85f3e9a4.chunk.js",
+    "static/js/runtime-main.846a569a.js",
+    "static/css/2.f0fce20c.chunk.css",
+    "static/js/2.26a68ebd.chunk.js",
     "static/css/main.bd8abe39.chunk.css",
-    "static/js/main.4ad8a819.chunk.js"
+    "static/js/main.a8b10032.chunk.js"
   ]
 }
