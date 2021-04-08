@@ -34,7 +34,7 @@ export default function TemporaryDrawer() {
   const history = useHistory();
 
   const home = () => {
-    history.push("/");
+    history.push("/canvas-remake");
   };
 
   const toggleDrawer = (anchor, open) => (event) => {

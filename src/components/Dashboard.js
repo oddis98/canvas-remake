@@ -11,19 +11,12 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Divider,
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AnnouncementIcon from "@material-ui/icons/Announcement";
 import MessageIcon from "@material-ui/icons/Message";
-import InboxIcon from "@material-ui/icons/Inbox";
-import NotificationImportantIcon from "@material-ui/icons/NotificationImportant";
-import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 
 import Logo from "../images/UiB_logo.png";
 import Course1 from "../images/course1.jpg";
@@ -34,6 +27,7 @@ import Img4 from "../images/img4.jpg";
 import Img5 from "../images/img5.jpg";
 
 import TemporaryDrawer from "./Drawer.js";
+import ActionList from "./ActionList.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -71,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     padding: "10px",
-    height: "25rem",
+    height: "28rem",
   },
   cardGridItem: {
     "@media (max-width: 600px)": {
@@ -110,8 +104,12 @@ export default function Dashboard() {
   const classes = useStyles();
   const history = useHistory();
 
+  const home = () => {
+    history.push("/canvas-remake");
+  };
+
   const course = () => {
-    history.push("/course");
+    history.push("/canvas-remake/course");
   };
   return (
     <Box>
@@ -123,11 +121,17 @@ export default function Dashboard() {
           }}
         >
           <Toolbar>
-            <img alt="logo" src={Logo} className={classes.logo} />
+            <img
+              alt="logo"
+              src={Logo}
+              className={classes.logo}
+              onClick={home}
+              style={{
+                cursor: "pointer",
+              }}
+            />
             <span className={classes.item} />
-            <IconButton className={classes.button}>
-              <TemporaryDrawer />
-            </IconButton>
+            <TemporaryDrawer />
           </Toolbar>
         </AppBar>
       </div>
@@ -143,26 +147,7 @@ export default function Dashboard() {
       <Box className={classes.body}>
         <Grid container>
           <Grid item className={classes.list}>
-            <List component="nav" aria-label="main mailbox folders">
-              <ListItem button>
-                <ListItemIcon>
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Inbox" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <NotificationImportantIcon />
-                </ListItemIcon>
-                <ListItemText primary="Notifications" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <CalendarTodayIcon />
-                </ListItemIcon>
-                <ListItemText primary="Calendar" />
-              </ListItem>
-            </List>
+            <ActionList />
           </Grid>
           <Grid item className={classes.cardGrid}>
             <Grid container className={classes.main}>

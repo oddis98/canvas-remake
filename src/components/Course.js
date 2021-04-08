@@ -5,30 +5,18 @@ import {
   Toolbar,
   Typography,
   Box,
-  IconButton,
   Card,
-  CardActionArea,
-  CardActions,
   CardContent,
-  CardMedia,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Divider,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Logo from "../images/UiB_logo.png";
-import Course1 from "../images/course1.jpg";
+import { useHistory } from "react-router-dom";
 
-import AnnouncementIcon from "@material-ui/icons/Announcement";
-import MessageIcon from "@material-ui/icons/Message";
-import InboxIcon from "@material-ui/icons/Inbox";
-import NotificationImportantIcon from "@material-ui/icons/NotificationImportant";
-import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
+import Logo from "../images/UiB_logo.png";
 
 import TemporaryDrawer from "./Drawer.js";
+import ActionList from "./ActionList.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -104,6 +92,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Course() {
   const classes = useStyles();
+  const history = useHistory();
+
+  const home = () => {
+    history.push("/canvas-remake");
+  };
+
   return (
     <div>
       <div className={classes.root}>
@@ -114,11 +108,17 @@ export default function Course() {
           }}
         >
           <Toolbar>
-            <img alt="logo" src={Logo} className={classes.logo} />
+            <img
+              alt="logo"
+              src={Logo}
+              className={classes.logo}
+              onClick={home}
+              style={{
+                cursor: "pointer",
+              }}
+            />
             <span className={classes.item} />
-            <IconButton className={classes.button}>
-              <TemporaryDrawer />
-            </IconButton>
+            <TemporaryDrawer />
           </Toolbar>
         </AppBar>
       </div>
@@ -129,26 +129,7 @@ export default function Course() {
       <Box className={classes.body}>
         <Grid container>
           <Grid item className={classes.list}>
-            <List component="nav" aria-label="main mailbox folders">
-              <ListItem button>
-                <ListItemIcon>
-                  <InboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="Inbox" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <NotificationImportantIcon />
-                </ListItemIcon>
-                <ListItemText primary="Notifications" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <CalendarTodayIcon />
-                </ListItemIcon>
-                <ListItemText primary="Calendar" />
-              </ListItem>
-            </List>
+            <ActionList />
           </Grid>
           <Grid item className={classes.cardGrid}>
             <Grid container className={classes.main}>

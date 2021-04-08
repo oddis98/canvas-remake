@@ -10,10 +10,10 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/canvas-remake">
           <Dashboard />
         </Route>
-        <Route exact path="/course">
+        <Route exact path="/canvas-remake/course">
           <Course />
         </Route>
       </Switch>
